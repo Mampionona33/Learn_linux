@@ -1,0 +1,82 @@
+navigation:h:Gauche
+navigation:j:Bas
+navigation:k:Haut
+navigation:l:Droite
+navigation:w:Avancer d'un mot
+navigation:b:Reculer d'un mot
+navigation:0:Aller au début de la ligne
+navigation:$:Aller à la fin de la ligne
+navigation:gg:Aller au début du fichier
+navigation:G:Aller à la fin du fichier
+navigation:nG:Aller à la ligne n (ex: 15G va à la ligne 15)
+navigation:n|:Aller à la colonne n (ex: 10| va à la colonne 10)
+
+edition:i:Insérer du texte avant le curseur
+edition:a:Ajouter du texte après le curseur
+edition:o:Insérer une nouvelle ligne en dessous
+edition:O:Insérer une nouvelle ligne au-dessus
+edition:u:Annuler la dernière action (Undo)
+edition:ctrl+r:Refaire l'action annulée (Redo)
+edition:dd:Couper (supprimer) la ligne entière
+edition:x:Supprimer le caractère sous le curseur
+
+clipboard:"+y:Copier la sélection dans le presse‑papier système
+clipboard:"+yy:Copier la ligne entière dans le presse‑papier système
+clipboard:"+p:Coller depuis le presse‑papier système après le curseur
+clipboard:"+P:Coller depuis le presse‑papier système avant le curseur
+clipboard:"*y:Copier dans le registre primaire (sélection X11)
+clipboard:"*p:Coller depuis le registre primaire (sélection X11)
+
+selection:v:Sélectionner caractère par caractère (Visual mode)
+selection:V:Sélectionner ligne entière (Visual Line mode)
+selection:ctrl+v:Sélectionner en bloc (Visual Block mode)
+selection:ggVG:Sélectionner tout le fichier
+selection:ve:Sélectionner un mot (curseur au début du mot)
+selection:aw:Sélectionner un mot entier avec espaces
+selection:viw:Sélectionner le mot sous le curseur
+selection:va":Sélectionner tout le contenu entre guillemets
+selection:va(:Sélectionner tout le contenu entre parenthèses
+
+
+copie:yy:Copier (Yank) la ligne entière
+copie:yw:Copier un mot
+copie:p:Coller (Paste) après le curseur
+copie:P:Coller avant le curseur
+
+duplication:yyp:Dupliquer la ligne courante
+duplication:ddp:Intervertir deux lignes
+duplication:xp:Intervertir deux caractères
+
+delete:d$:Supprimer jusqu’à la fin de la ligne
+delete:d0:Supprimer jusqu’au début de la ligne
+delete:dw:Supprimer un mot
+delete:daw:Supprimer un mot entier (avec espaces)
+delete:dG:Supprimer jusqu’à la fin du fichier
+delete:dgg:Supprimer jusqu’au début du fichier
+delete:d/:Supprimer jusqu’à un motif recherché
+delete:ndd:Supprimer n lignes (ex: 3dd supprime 3 lignes)
+
+recherche:/mot:Rechercher "mot" vers le bas
+recherche:?mot:Rechercher "mot" vers le haut
+recherche:n:Aller au résultat de recherche suivant
+recherche:N:Aller au résultat de recherche précédent
+recherche:*:Rechercher le mot exact situé sous le curseur
+
+remplacement::s/ancien/nouveau/:Remplacer la première occurrence sur la ligne courante
+remplacement::s/ancien/nouveau/g:Remplacer toutes les occurrences sur la ligne courante
+remplacement::%s/ancien/nouveau/g:Remplacer toutes les occurrences dans tout le fichier
+remplacement::%s/ancien/nouveau/gc:Remplacer dans tout le fichier avec demande de confirmation (y/n)
+remplacement::27,34s/ancien/nouveau/:Remplacer la première occurrence entre les lignes 27 et 34
+remplacement::27,34s/ancien/nouveau/g:Remplacer toutes les occurrences entre les lignes 27 et 34
+remplacement::.,34s/ancien/nouveau/:Remplacer depuis la ligne courante jusqu’à la ligne 34
+remplacement::'a,'bs/ancien/nouveau/:Remplacer entre deux marques (a et b)
+
+fichier::w:Sauvegarder
+fichier::q:Quitter
+fichier::wq:Sauvegarder et quitter
+fichier::q!:Quitter sans sauvegarder
+
+random::${#tab[@]}:Taille d’un tableau
+random::${tab[$((RANDOM % ${#tab[@]}))]}:Élément aléatoire d’un tableau
+random::for i in {1..N}; do ...; done:Construire une chaîne aléatoire de N caractères
+

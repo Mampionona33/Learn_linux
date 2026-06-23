@@ -1,0 +1,99 @@
+GROUPE                     | COMMANDE   | EXEMPLE                    | EXPLICATION
+Gestion_Fichiers           | ls         | ls -lR                     | Liste détaillée et récursive
+                           |            |                            | OPTIONS : -a (tous), -l (détail), -h (taille humaine), -t (tri par date), -S (tri par taille), -R (récursif), -d (dossier seul)
+
+Gestion_Fichiers           | cp         | cp src.txt dest/           | Copie un fichier vers un dossier
+                           |            |                            | OPTIONS : -r (récursif/dossier), -i (demande confirmation), -v (verbose/détail), -u (copie seulement si plus récent)
+
+Gestion_Fichiers           | rm         | rm -r dossier/             | Supprime un dossier et son contenu
+                           |            |                            | OPTIONS : -r (récursif), -f (force/sans confirmation), -i (demande confirmation), -v (verbose)
+
+Gestion_Fichiers           | mv         | mv old.txt new.txt         | Renomme ou déplace un fichier
+                           |            |                            | OPTIONS : -i (demande confirmation avant écrasement), -v (verbose), -n (ne pas écraser)
+
+Gestion_Fichiers           | mkdir      | mkdir -p a/b/c             | Crée une arborescence de dossiers
+                           |            |                            | OPTIONS : -p (crée les parents manquants sans erreur), -v (verbose), -m (définit les permissions)
+
+Gestion_Fichiers           | chmod      | chmod u+x script.sh        | Change les permissions (ex: ajoute l'exécution pour le propriétaire)
+                           |            |                            | OPTIONS : -R (récursif), -v (verbose), -x (enlève exécution), +r/w/x (ajoute lecture/écriture/exécution), 755 (mode octal)
+
+Gestion_Fichiers           | chown      | chown alice:dev script.sh  | Change le propriétaire et le groupe (ex: alice et groupe dev)
+                           |            |                            | OPTIONS : -R (récursif), -v (verbose), --reference=cible (copie les droits d'un autre fichier), user:group (syntaxe complète)
+
+Gestion_Fichiers           | chgrp      | chgrp dev script.sh        | Change uniquement le groupe propriétaire (ex: passe au groupe dev)
+                           |            |                            | OPTIONS : -R (récursif), -v (verbose), --reference=cible (copie le groupe d'un autre fichier)
+
+Gestion_Fichiers           | truncate   | truncate -s 0 file.txt     | Modifie (réduit ou étend) la taille d'un fichier. Souvent utilisé pour vider un fichier.
+                           |            |                            | OPTIONS : -s (taille cible, ex: 0, 10M, +5K), -c (ne pas créer le fichier s'il n'existe pas)
+
+Wildcards & Expansion      | * | ls *.txt                   | Correspond à TOUS les caractères (zéro ou plus). Ex: trouve "note.txt", "a.txt".
+                           |            |                            | USAGE : Remplace n'importe quelle chaîne de caractères dans un nom de fichier.
+
+Wildcards & Expansion      | ?          | ls photo?.jpg              | Remplace EXACTEMENT un caractère. Ex: trouve "photo1.jpg", "photoA.jpg" mais PAS "photo10.jpg".
+                           |            |                            | USAGE : Utile pour cibler des fichiers avec un suffixe d'un seul caractère.
+
+Wildcards & Expansion      | []         | ls file[1-3].log           | Correspond à un SEUL caractère parmi une plage ou une liste. Ex: trouve "file1.log", "file2.log", "file3.log".
+                           |            |                            | USAGE : [abc] (a, b ou c), [0-9] (chiffre), [!a] (tout sauf a).
+
+Wildcards & Expansion      | {}         | ls *.{jpg,png}             | Expansion de motifs (Brace Expansion). Génère plusieurs variantes. Ex: liste tous les .jpg ET .png.
+                           |            |                            | USAGE : Permet de lancer une commande pour plusieurs extensions ou noms en une fois.
+
+Wildcards & Expansion      | {n..m}     | touch file{1..3}.log       | Expansion de séquence numérique ou alphabétique. Ex: crée "file1.log", "file2.log", "file3.log".
+                           |            |                            | USAGE : {1..10} (nombres), {a..z} (lettres), {01..05} (zéros leading).
+
+Gestion Erreurs            | 2>/dev/null| cmd 2>/dev/null            | Ignore les erreurs (redirige la sortie d'erreur vers le néant).
+                           |            |                            | USAGE : Utile pour supprimer les messages d'erreur encombrants (ex: "Permission denied").
+
+Comparaison                | diff       | diff f1.txt f2.txt         | Compare ligne par ligne (texte)
+                           |            |                            | OPTIONS : -r (récursif), -i (ignore casse), -w (ignore espaces), -q (rapporte seulement si différent), -y (affichage côte à côte)
+
+Comparaison                | cmp        | cmp bin1 bin2              | Compare octet par octet (binaire)
+                           |            |                            | OPTIONS : -l (affiche tous les octets différents), -s (silencieux, code retour seul), -n (limite le nombre d'octets)
+
+Traitement_Texte           | cut        | cut -d: -f1 file           | Extrait la 1ère colonne (séparateur :)
+                           |            |                            | OPTIONS : -d (délimiteur), -f (champs), -c (caractères par position), -b (octets)
+
+Traitement_Texte           | awk        | awk '{print $2}'           | Affiche la 2ème colonne
+                           |            |                            | OPTIONS : -F (délimiteur), -v (variable), '{action}' (script de traitement puissant)
+
+Traitement_Texte           | grep       | grep -i 'error' log        | Recherche insensible à la casse
+                           |            |                            | OPTIONS : -i (ignore casse), -v (inverse), -r (récursif), -n (numéro ligne), -c (compte), -o (affiche match seul), -E (regex étendue)
+
+Traitement_Texte           | sort       | sort -n file               | Tri numérique
+                           |            |                            | OPTIONS : -n (numérique), -r (inverse), -k (clé/colonne), -t (délimiteur), -u (unique), -h (tailles humaines 2K, 1G)
+
+Traitement_Texte           | uniq       | sort f | uniq              | Supprime les doublons adjacents
+                           |            |                            | OPTIONS : -c (compte occurrences), -d (affiche seulement doublons), -u (affiche seulement uniques), -i (ignore casse)
+
+Traitement_Texte           | wc         | wc -l file                 | Compte le nombre de lignes
+                           |            |                            | OPTIONS : -l (lignes), -w (mots), -c (octets/caractères), -m (caractères unicode)
+
+Affichage                  | cat        | cat file                   | Affiche tout le fichier
+                           |            |                            | OPTIONS : -n (numérote toutes lignes), -b (numérote lignes non vides), -s (compresse lignes vides), -E (affiche $ fin de ligne), -T (affiche tabulations)
+
+Affichage                  | less       | less file                  | Navigation page par page (haut/bas)
+                           |            |                            | OPTIONS : -N (numéros de ligne), -S (ne pas couper les lignes longues), -R (couleurs brutes), +F (mode suivi comme tail -f)
+
+Affichage                  | tail       | tail -f log                | Suit le fichier en temps réel
+                           |            |                            | OPTIONS : -f (suivi), -F (suivi robuste rotation), -n (nombre lignes), -q (quiet)
+
+Édition & Redirection      | vi         | vi fichier.txt             | Édition manuelle de texte (mode insertion 'i', sauvegarde ':w', quitte ':q')
+                           |            |                            | VARIANTES : vim (version améliorée), nano (éditeur plus simple), :set nu (affiche numéros de ligne)
+
+Édition & Redirection      | >          | echo "txt" > file          | Écriture unique (écrase le contenu existant ou crée le fichier)
+                           |            |                            | USAGE : commande > fichier (Redirection de sortie standard, écrase tout)
+
+Édition & Redirection      | >>         | echo "txt" >> file         | Ajout en fin de fichier (append)
+                           |            |                            | USAGE : commande >> fichier (Conserve le contenu existant, ajoute à la suite)
+
+Édition & Redirection      | tee        | cmd | tee file             | Écriture hybride (écrit dans le fichier ET affiche à l'écran)
+                           |            |                            | OPTIONS : -a (ajoute au lieu d'écraser), -i (ignore interruptions)
+
+Aide                       | whatis     | whatis ls                  | Description en une ligne
+                           |            |                            | OPTIONS : -r (regex), -w (wildcard)
+
+Aide                       | --help     | ls --help                  | Résumé des options
+                           |            |                            | (Option standard pour la plupart des commandes GNU)
+
+Aide                       | man        | man ls                     | Manuel complet
+                           |            |                            | Navigation : Espace (suivant), b (précédent), /motif (chercher), q (quitter)
