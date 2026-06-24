@@ -26,6 +26,9 @@ Gestion_Fichiers           | chgrp      | chgrp dev script.sh        | Change un
 Gestion_Fichiers           | truncate   | truncate -s 0 file.txt     | Modifie (réduit ou étend) la taille d'un fichier. Souvent utilisé pour vider un fichier.
                            |            |                            | OPTIONS : -s (taille cible, ex: 0, 10M, +5K), -c (ne pas créer le fichier s'il n'existe pas)
 
+Recherche                  | find       | find . -name "*.txt"       | Recherche des fichiers/dossiers selon divers critères (nom, type, taille, etc.)
+                           |            |                            | OPTIONS : -name (nom exact), -iname (ignore casse), -type f/d (fichier/dossier), -mtime -7 (modifié < 7j), -size +1M (> 1Mo), -exec cmd {} \; (exécute commande)
+
 Wildcards & Expansion      | * | ls *.txt                   | Correspond à TOUS les caractères (zéro ou plus). Ex: trouve "note.txt", "a.txt".
                            |            |                            | USAGE : Remplace n'importe quelle chaîne de caractères dans un nom de fichier.
 
@@ -67,6 +70,18 @@ Traitement_Texte           | uniq       | sort f | uniq              | Supprime 
 
 Traitement_Texte           | wc         | wc -l file                 | Compte le nombre de lignes
                            |            |                            | OPTIONS : -l (lignes), -w (mots), -c (octets/caractères), -m (caractères unicode)
+Traitement_Texte           | sed        | sed 's/old/new/g' file     | Remplace "old" par "new" (g = toutes les occurrences de la ligne).
+                           |            |                            | OPTIONS : -i (sauvegarde directement dans le fichier), -E (utilise les regex étendues)
+
+Traitement_Texte           | sed        | sed '3d' file              | Supprime des lignes. Ici, supprime la 3ème ligne.
+                           |            |                            | VARIANTE : sed '/erreur/d' file (Supprime toutes les lignes contenant le mot "erreur")
+
+Traitement_Texte           | sed        | sed -n '1,5p' file         | Affiche uniquement les lignes 1 à 5.
+                           |            |                            | OPTIONS : -n (mode silencieux, ne sort rien par défaut), p (print/affiche la ligne ciblée)
+
+Traitement_Texte           | sed        | sed -E 's/^[0-9]+/X/' file | Utilisation de Regex : Remplace les suites de chiffres (^[0-9]+) en début de ligne par "X".
+                           |            |                            | USAGE : Très puissant pour formater ou nettoyer des données complexes via des motifs.
+
 
 Affichage                  | cat        | cat file                   | Affiche tout le fichier
                            |            |                            | OPTIONS : -n (numérote toutes lignes), -b (numérote lignes non vides), -s (compresse lignes vides), -E (affiche $ fin de ligne), -T (affiche tabulations)
