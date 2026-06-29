@@ -70,6 +70,11 @@ function generate_ip_adress(){
 	echo "$a.$b.$c.$d"
 }
 
+function generate_port (){
+	local idx=$((RANDOM % 99999 + 1111))
+	echo "$idx"
+}
+
 function generate_line(){
 	local line=""
 	local server=$(generate_server)
@@ -78,7 +83,8 @@ function generate_line(){
 	local status=$(generate_status)
 	local username=$(generate_username)
 	local ip_adresse=$(generate_ip_adress)
-	echo "$date_ $server sshd[$sshd]:$status password for $username from $ip_adresse "
+	local port=$(generate_port) 
+	echo "$date_ $server sshd[$sshd]:$status password for $username from $ip_adresse port $port "
 }
 
 generate_line
