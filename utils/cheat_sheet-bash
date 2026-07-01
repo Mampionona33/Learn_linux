@@ -25,7 +25,7 @@ gestion_erreurs  : 2>/dev/null i			: Ignore erreurs (redirige vers néant)
 comparaison      : diff     				: Compare ligne par ligne (-r récursif, -i ignore casse, -w ignore espaces, -q juste différent, -y côte à côte)
 comparaison      : cmp      				: Compare octet par octet (-l octets différents, -s silencieux, -n limite octets)
 
-traitement_texte : cut      				: Extrait colonne (-d délimiteur, -f champs, -c caractères, -b octets)
+traitement_texte : cut       				: Extrait colonne (-d délimiteur, -f champs, -c caractères, -b octets ; ex: cut -d ":" -f1 /etc/passwd → affiche logins)
 traitement_texte : awk      				: Affiche colonne (-F délimiteur, -v variable, {action} script)
 traitement_texte : grep     				: Recherche texte (-i ignore casse, -v inverse, -r récursif, -n num ligne, -c compte, -o match seul, -E regex étendue)
 traitement_texte : sort     				: Tri (-n numérique, -r inverse, -k clé, -t délimiteur, -u unique, -h tailles humaines)
@@ -63,7 +63,12 @@ utilisateur      : passwd                	: Change mot de passe (ex: passwd bob 
 utilisateur      : id username           	: Affiche UID/GID/groupes (ex: id bob → uid=1001 gid=1001 groupes=bob,sudo)
 utilisateur      : userdel -r            	: Supprime utilisateur + home (ex: userdel -r bob → supprime compte + /home/bob)
 utilisateur      : usermod -G groupe     	: Remplace groupes (ex: usermod -G sudo bob → bob uniquement dans sudo)
+utilisateur 	 : deluser bob              : Supprime utilisateur (home conservé par défaut)
+utilisateur  	 : deluser --remove-home bob: Supprime utilisateur + home
+utilisateur 	 : deluser --remove-all-files bob : Supprime utilisateur + tous ses fichiers
 
+groupe      	 : deluser --group dev      : Supprime groupe “dev” (si vide)
+groupe      	 : deluser bob sudo         : Retire bob du groupe sudo
 groupe           : groupadd              	: Crée groupe (ex: groupadd dev → ajoute groupe “dev”)
 groupe           : chgrp -R              	: Change groupe propriétaire (ex: chgrp -R dev /var/www)
 
