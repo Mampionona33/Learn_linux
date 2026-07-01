@@ -67,7 +67,9 @@ utilisateur      : usermod -G groupe     	: Remplace groupes (ex: usermod -G sud
 groupe           : groupadd              	: Crée groupe (ex: groupadd dev → ajoute groupe “dev”)
 groupe           : chgrp -R              	: Change groupe propriétaire (ex: chgrp -R dev /var/www)
 
+liens             : ln                    	: Crée lien solide (hard link ; ex: ln fichier.txt copie.txt → même inode)
+liens             : ln -s                 	: Crée lien symbolique (soft link ; ex: ln -s /usr/bin/python3 py → raccourci)
+
 systeme          : /etc/passwd           	: Comptes utilisateurs (ex: bob:x:1001:1001:/home/bob:/bin/bash)
 systeme          : /etc/group            	: Groupes (ex: dev:x:1002:bob,alice)
 systeme          : /etc/shadow           	: Mots de passe chiffrés (ex: bob:$6$hash$...:19000:0:99999:7:::)
-
