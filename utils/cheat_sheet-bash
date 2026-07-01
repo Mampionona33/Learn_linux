@@ -35,6 +35,7 @@ traitement_texte : sed 3d    				: Supprime ligne 3 (variante /erreur/d supprime
 traitement_texte : sed -n '1,5p' 			: Affiche lignes 1 à 5 (-n silencieux, p print)
 traitement_texte : sed -E 's/^[0-9]+/X/' 	: Regex → remplace chiffres début ligne par X
 
+affichage        : cat       				: Affiche fichier OU recolle morceaux (cat part_* > fichier_reconstruit)
 affichage        : cat       				: Affiche fichier (-n num lignes, -b num lignes non vides, -s compresse vides, -E fin $, -T tabulations)
 affichage        : less      				: Navigation page par page (-N num lignes, -S pas couper, -R couleurs, +F suivi)
 affichage        : tail -f   				: Suit fichier en temps réel (-f suivi, -F suivi robuste, -n nb lignes, -q quiet)
