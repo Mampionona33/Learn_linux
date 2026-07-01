@@ -78,3 +78,15 @@ liens             : ln -s                 	: Crée lien symbolique (soft link ; 
 systeme          : /etc/passwd           	: Comptes utilisateurs (ex: bob:x:1001:1001:/home/bob:/bin/bash)
 systeme          : /etc/group            	: Groupes (ex: dev:x:1002:bob,alice)
 systeme          : /etc/shadow           	: Mots de passe chiffrés (ex: bob:$6$hash$...:19000:0:99999:7:::)
+
+disque           : lsblk                	: Liste périphériques/partitions (ex: lsblk -f → avec UUID et FS)
+disque           : fdisk                	: Partitionne disque MBR (ex: sudo fdisk /dev/sda → menu interactif)
+disque           : parted               	: Partitionne disque GPT (ex: sudo parted /dev/sda → commandes modernes)
+disque           : mkfs                 	: Formate partition (ex: sudo mkfs.ext4 /dev/sda1 → ext4)
+disque           : mount                	: Monte partition (ex: sudo mount /dev/sda1 /mnt/disk1)
+disque           : umount               	: Démonte partition (ex: sudo umount /mnt/disk1)
+disque           : df                   	: Affiche espace disque (ex: df -h → taille humaine)
+disque           : du                   	: Taille dossiers/fichiers (ex: du -sh /var/log → taille totale logs)
+disque           : fsck                 	: Vérifie/répare FS (ex: sudo fsck /dev/sda1 → check ext4)
+disque           : smartctl             	: Santé disque (ex: sudo smartctl -a /dev/sda → infos SMART)
+
