@@ -1,4 +1,5 @@
-navigation 		 : pwd 						: Affiche le chemin absolu du répertoire courant
+navigation        : pwd        : Affiche le chemin absolu du répertoire courant
+utilisateur       : whoami     : Affiche le nom de l’utilisateur courant
 
 gestion_fichiers : ls        				: Liste détaillée récursive (-a tous, -l détail, -h taille humaine, -t tri date, -S tri taille, -R récursif, -d dossier seul)
 gestion_fichiers : cp        				: Copie fichier → dossier (-r récursif, -i confirmation, -v verbose, -u si plus récent)
@@ -55,4 +56,18 @@ compression      : dzip      				: Compression rapide/différente selon impléme
 aide             : whatis ls 				: Description en une ligne (-r regex, -w wildcard)
 aide             : --help    				: Résumé options
 aide             : man ls    				: Manuel complet (Espace suivant, b précédent, /motif chercher, q quitter)
+
+utilisateur       : useradd               : Crée utilisateur (bas niveau ; ex: useradd -m bob → crée bob + home)
+utilisateur       : adduser               : Crée utilisateur (haut niveau ; ex: adduser alice → questions + home auto)
+utilisateur       : passwd                : Change mot de passe (ex: passwd bob → saisie nouveau mot de passe)
+utilisateur       : id username           : Affiche UID/GID/groupes (ex: id bob → uid=1001 gid=1001 groupes=bob,sudo)
+utilisateur       : userdel -r            : Supprime utilisateur + home (ex: userdel -r bob → supprime compte + /home/bob)
+utilisateur       : usermod -G groupe     : Remplace groupes (ex: usermod -G sudo bob → bob uniquement dans sudo)
+
+groupe            : groupadd              : Crée groupe (ex: groupadd dev → ajoute groupe “dev”)
+groupe            : chgrp -R              : Change groupe propriétaire (ex: chgrp -R dev /var/www)
+
+systeme           : /etc/passwd           : Comptes utilisateurs (ex: bob:x:1001:1001:/home/bob:/bin/bash)
+systeme           : /etc/group            : Groupes (ex: dev:x:1002:bob,alice)
+systeme           : /etc/shadow           : Mots de passe chiffrés (ex: bob:$6$hash$...:19000:0:99999:7:::)
 
