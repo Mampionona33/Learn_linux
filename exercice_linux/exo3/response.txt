@@ -1,0 +1,85 @@
+total 44
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  1 07:46 README.md
+-rw-rw-r-- 1 mampionona mampionona 20480 Jul  1 07:46 archive_tar.tar
+-rw-rw-r-- 1 mampionona mampionona  9889 Jul  1 07:46 auth.log
+-rw-rw-r-- 1 mampionona mampionona   980 Jul  1 07:46 auth_copy.log
+-rwxrwxr-x 1 mampionona mampionona  2322 Jul  1 07:46 mock_log.sh
+-rw-rw-r-- 1 mampionona mampionona  3870 Jul  2 06:59 question1.md
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  2 08:33 response.txt
+/home/mampionona/Downloads/Learn_linux/exercice_linux/exo3
+mampionona
+total 52
+-rwxrwxr-x 1 mampionona mampionona  2322 Jul  1 07:46 script.sh
+-rw-rw-r-- 1 mampionona mampionona   544 Jul  2 08:40 response.txt
+-rw-rw-r-- 1 mampionona mampionona  3870 Jul  2 06:59 question1.md
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 08:45 backup_logs
+-rw-rw-r-- 1 mampionona mampionona   980 Jul  1 07:46 auth_copy.log
+-rw-rw-r-- 1 mampionona mampionona  9889 Jul  1 07:46 auth.log
+-rw-rw-r-- 1 mampionona mampionona 20480 Jul  1 07:46 archive_tar.tar
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  1 07:46 README.md
+total 52
+-rwxrwxr-x 1 mampionona mampionona  2322 Jul  1 07:46 script.sh
+-rw-rw-r-- 1 mampionona mampionona  1082 Jul  2 08:46 response.txt
+-rw-rw-r-- 1 mampionona mampionona  3870 Jul  2 06:59 question1.md
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 08:45 backup_logs
+-r--r--r-- 1 root       mampionona   980 Jul  1 07:46 auth_copy.log
+-rw-rw-r-- 1 mampionona users       9889 Jul  1 07:46 auth.log
+-rw-rw-r-- 1 mampionona mampionona 20480 Jul  1 07:46 archive_tar.tar
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  1 07:46 README.md
+total 48
+-rwxrwxr-x 1 mampionona mampionona  2322 Jul  1 07:46 script.sh
+-rw-rw-r-- 1 mampionona mampionona  1620 Jul  2 08:50 response.txt
+-rw-rw-r-- 1 mampionona mampionona  3870 Jul  2 06:59 question1.md
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 08:45 backup_logs
+-r--r--r-- 1 root       mampionona     0 Jul  2 08:56 auth_copy.log
+-rw-rw-r-- 1 mampionona users       9889 Jul  1 07:46 auth.log
+-rw-rw-r-- 1 mampionona mampionona 20480 Jul  1 07:46 archive_tar.tar
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  1 07:46 README.md
+.:
+total 40
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  1 07:46 README.md
+-rw-rw-r-- 1 mampionona mampionona 20480 Jul  1 07:46 archive_tar.tar
+-r--r--r-- 1 root       mampionona     0 Jul  2 08:56 auth_copy.log
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 09:02 authlog
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 08:45 backup_logs
+-rw-rw-r-- 1 mampionona mampionona  3870 Jul  2 06:59 question1.md
+-rw-rw-r-- 1 mampionona mampionona  2158 Jul  2 09:03 response.txt
+-rwxrwxr-x 1 mampionona mampionona  2322 Jul  1 07:46 script.sh
+
+./authlog:
+total 32
+-rw-rw-r-- 1 mampionona users      9889 Jul  1 07:46 auth.log
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xaa
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xab
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xac
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xad
+-rw-rw-r-- 1 mampionona mampionona 1697 Jul  2 09:02 auth_xae
+
+./backup_logs:
+total 0
+.:
+total 52
+-rw-rw-r-- 1 mampionona mampionona     0 Jul  1 07:46 README.md
+-rw-rw-r-- 1 mampionona mampionona 20480 Jul  1 07:46 archive_tar.tar
+-rw-rw-r-- 1 mampionona users       9889 Jul  1 07:46 auth.log
+-r--r--r-- 1 root       mampionona     0 Jul  2 08:56 auth_copy.log
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 09:04 authlog
+drwxrwxr-x 2 mampionona mampionona  4096 Jul  2 08:45 backup_logs
+-rw-rw-r-- 1 mampionona mampionona  3870 Jul  2 06:59 question1.md
+-rw-rw-r-- 1 mampionona mampionona  3115 Jul  2 09:03 response.txt
+-rwxrwxr-x 1 mampionona mampionona  2322 Jul  1 07:46 script.sh
+
+./authlog:
+total 20
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xaa
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xab
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xac
+-rw-rw-r-- 1 mampionona mampionona 2048 Jul  2 09:02 auth_xad
+-rw-rw-r-- 1 mampionona mampionona 1697 Jul  2 09:02 auth_xae
+
+./backup_logs:
+total 0
+./authlog
+./auth_copy.log
+./auth.log
+./backup_logs
